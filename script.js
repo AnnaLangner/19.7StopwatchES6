@@ -8,16 +8,11 @@ class Stopwatch extends React.Component{
             miliseconds: 0
         };
 
-        this.print = this.print.bind(this);
         this.format = this.format.bind(this);
         this.start = this.start.bind(this);
         this.step = this.step.bind(this);
         this.calculate = this.calculate.bind(this);
         this.stop = this.stop.bind(this);
-    }
-
-    print() {
-        this.display.innerText = this.format(this.times);
     }
 
     format(times) {
