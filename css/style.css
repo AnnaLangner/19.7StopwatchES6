@@ -4,11 +4,11 @@ body {
   text-align: center;
 }
 
-body .app {
+body .container {
   padding-top: 50px;
 }
 
-body .app .button {
+body .container .button {
   padding-right: 10px;
   text-decoration: none;
   color: #11B311;
@@ -16,7 +16,8 @@ body .app .button {
   font-weight: 700;
 }
 
-body .app .stopwatch {
+body .container .stopwatch {
+  height: 100px;
   font-size: 60px;
   font-weight: 700;
   padding: 10px;
