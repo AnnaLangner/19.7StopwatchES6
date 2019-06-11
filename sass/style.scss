@@ -1,10 +1,13 @@
 body {
-	background-color: #f4cbed;
-	margin: 0 auto;
 	text-align: center;
 
 	.container {
-		padding-top: 50px;
+		padding-top: 30px;
+		margin: 0 auto;
+		background-color: #f4cbed;
+		max-width: 440px;
+		border: 3px solid #6B72E6;
+		border-radius: 4px;
 		button {
 			padding-right: 10px;
 			margin-right: 10px;
@@ -12,9 +15,9 @@ body {
 			color: #11B311;
 			font-size: 20px;
 			font-weight: 700;
-			border-radius: 4px;
 			background-color: #f4cbed;
 			border: 3px solid #6B72E6;
+			border-radius: 4px;
 			width: 100px;
 			height: 40px;
 
@@ -22,7 +25,7 @@ body {
 		.stopwatch {
 			font-size: 60px;
 			font-weight: 700;
-			padding: 10px;
+			padding: 20px 10px;
 		}
 		.results{
 
