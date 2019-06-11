@@ -7,12 +7,6 @@ class Stopwatch extends React.Component{
             seconds: 0,
             miliseconds: 0
         };
-
-        this.format = this.format.bind(this);
-        this.start = this.start.bind(this);
-        this.step = this.step.bind(this);
-        this.calculate = this.calculate.bind(this);
-        this.stop = this.stop.bind(this);
     }
 
     format(times) {
@@ -58,11 +52,22 @@ class Stopwatch extends React.Component{
         clearInterval(this.watch);
     }
 
+    restart() {
+        this.setState({
+            running: false,
+            minutes: 0,
+            seconds: 0,
+            miliseconds: 0
+        });
+        clearInterval(this.watch);
+    }
+
     render() {
         return (
             <div className={'container'}>
-                <button onClick={this.start}>Start</button>
-                <button onClick={this.stop}>Stop</button>
+                <button onClick={() => {this.start()} }>Start</button>
+                <button onClick={() => {this.stop()} }>Stop</button>
+                <button onClick={() => {this.restart()} }>Restart</button>
                 <div className={'stopwatch'}>
                     {this.format({
                         minutes: this.state.minutes,

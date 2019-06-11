@@ -22,12 +22,6 @@ var Stopwatch = function (_React$Component) {
             seconds: 0,
             miliseconds: 0
         };
-
-        _this.format = _this.format.bind(_this);
-        _this.start = _this.start.bind(_this);
-        _this.step = _this.step.bind(_this);
-        _this.calculate = _this.calculate.bind(_this);
-        _this.stop = _this.stop.bind(_this);
         return _this;
     }
 
@@ -84,20 +78,44 @@ var Stopwatch = function (_React$Component) {
             clearInterval(this.watch);
         }
     }, {
+        key: 'restart',
+        value: function restart() {
+            this.setState({
+                running: false,
+                minutes: 0,
+                seconds: 0,
+                miliseconds: 0
+            });
+            clearInterval(this.watch);
+        }
+    }, {
         key: 'render',
         value: function render() {
+            var _this3 = this;
+
             return React.createElement(
                 'div',
                 { className: 'container' },
                 React.createElement(
                     'button',
-                    { onClick: this.start },
+                    { onClick: function onClick() {
+                            _this3.start();
+                        } },
                     'Start'
                 ),
                 React.createElement(
                     'button',
-                    { onClick: this.stop },
+                    { onClick: function onClick() {
+                            _this3.stop();
+                        } },
                     'Stop'
+                ),
+                React.createElement(
+                    'button',
+                    { onClick: function onClick() {
+                            _this3.restart();
+                        } },
+                    'Restart'
                 ),
                 React.createElement(
                     'div',
